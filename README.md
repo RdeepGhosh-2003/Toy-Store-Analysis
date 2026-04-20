@@ -1,23 +1,44 @@
 # 🧸 Toy Store Analytics Dashboard (Power BI)
 
+![Power BI](https://img.shields.io/badge/Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![DAX](https://img.shields.io/badge/DAX-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)
+![Analytics](https://img.shields.io/badge/Data%20Analytics-FF6F00?style=for-the-badge&logo=google-analytics&logoColor=white)
+
+---
+
 ## 🚀 What this project is about
 
-This project is a full business analysis of an e-commerce toy store using Power BI.
+This project is a full **business analysis of an e-commerce toy store** using Power BI.
 
-Instead of just showing numbers, the goal was to answer real business questions:
+Instead of just showing numbers, the focus is on answering real business questions:
 
-- Where are we losing customers?
-- Which marketing channels actually drive revenue?
-- Which products are profitable vs risky?
-- Do repeat users behave differently from new users?
+- 📉 Where are we losing customers?
+- 📢 Which marketing channels actually drive revenue?
+- 📦 Which products are profitable vs risky?
+- 👥 Do repeat users behave differently from new users?
+
+---
+
+## 📊 Key Business Metrics
+
+| Metric | Value |
+|------|------|
+| 💰 Revenue | $1.94M |
+| 💵 Profit | $1.22M |
+| 🛒 Orders | 32K |
+| 🌐 Sessions | 473K |
+| 💳 AOV | $60 |
+| 📈 Conversion Rate | 6.83% |
 
 ---
 
 ## 🧠 What I built
 
-A 5-page interactive dashboard covering:
+A **5-page interactive dashboard** covering:
 
-### 1. Executive Overview
+---
+
+### 🟫 1. Executive Overview
 High-level business snapshot:
 - Revenue, Profit, Orders, AOV
 - Trends over time
@@ -25,49 +46,49 @@ High-level business snapshot:
 
 ---
 
-### 2. Marketing Performance
+### 🟨 2. Marketing Performance
 Breakdown of acquisition channels:
 - Traffic vs conversions by channel
 - Revenue contribution
 - Device-level performance
 
 👉 **Key takeaway:**  
-Google drives volume, but Bing converts better.
+Google drives the most traffic and revenue, while Bing converts more efficiently.
 
 ---
 
-### 3. Funnel Analysis
+### 🟥 3. Funnel Analysis
 User journey from entry to purchase:
 
-Sessions → Product → Cart → Order
+**Sessions → Product → Cart → Order**
 
-- Step-wise conversion rates
-- Drop-off analysis
-- Channel-level funnel comparison
+- Step-wise conversion rates  
+- Drop-off analysis  
+- Channel-level funnel comparison  
 
 👉 **Key takeaway:**  
 The biggest drop happens at **Product → Cart (~64%)**  
-This is the main optimization opportunity.
+This is the biggest revenue opportunity.
 
 ---
 
-### 4. Product Performance
+### 🟪 4. Product Performance
 Deep dive into product-level metrics:
-- Revenue & Profit by product
-- Margin analysis
-- Refund rates
+- Revenue & Profit by product  
+- Margin analysis  
+- Refund rates  
 
 👉 **Key takeaway:**  
-Some high-margin products underperform in sales, while others show refund issues.
+Some products have high margins but low sales, while others show higher refund rates (potential quality issues).
 
 ---
 
-### 5. User Behavior
+### 🟦 5. User Behavior
 Understanding customer patterns:
-- New vs Repeat users
-- Conversion differences
-- Device behavior
-- User growth trends
+- New vs Repeat users  
+- Conversion differences  
+- Device behavior  
+- User growth trends  
 
 👉 **Key takeaway:**  
 Repeat users convert significantly higher.  
@@ -75,51 +96,66 @@ Mobile users underperform compared to desktop.
 
 ---
 
-## 🏗️ How the data is structured
+## 🏗️ Data Model
 
-I used a **star schema** approach:
+This project uses a **Star Schema** for efficient and scalable analysis:
 
-**Fact tables:**
-- orders  
-- order_items  
-- website_sessions  
-- website_pageviews  
-- order_item_refunds  
+       DateTable
+           │
+           │
+┌───────────▼───────────┐
+│ Orders │
+└───────────┬───────────┘
+│
+┌───────▼────────┐
+│ Order_Items │
+└───────┬────────┘
+│
+┌──────▼──────┐
+│ Products │
+└─────────────┘
 
-**Dimension tables:**
-- products  
-- Date table  
+Other Supporting Tables:
 
-This ensures clean relationships and scalable analysis.
+Website_Sessions
+Website_Pageviews
+Order_Item_Refunds
+
+
+### 💡 Key Modeling Decisions
+- Created a dedicated **Date Table** for time intelligence  
+- Avoided ambiguous relationships  
+- Built a centralized **Measures table**  
+- Differentiated **user-level vs session-level metrics**
 
 ---
 
 ## 📐 Key metrics I created
 
-- Conversion Rate  
-- Funnel Conversion (Product / Cart / Order)  
-- Drop-off Rates  
-- Margin %  
-- Refund Rate  
-- Repeat User Share  
+- 📈 Conversion Rate  
+- 🔻 Funnel Conversion (Product / Cart / Order)  
+- 📉 Drop-off Rates  
+- 💰 Margin %  
+- 🔁 Refund Rate  
+- 👥 Repeat User Share  
 
 ---
 
 ## 🛠️ Tools used
 
-- Power BI  
-- DAX  
-- Power Query  
-- Data Modeling  
+- 📊 Power BI  
+- 🧮 DAX  
+- 🔄 Power Query  
+- 🧱 Data Modeling  
 
 ---
 
 ## 📊 What I learned
 
-- How to think in terms of **business questions, not just visuals**
-- The difference between **session-level vs user-level metrics**
-- How to build a **funnel analysis from raw event data**
-- Designing dashboards that highlight **decision points**
+- Thinking in terms of **business problems, not just visuals**  
+- Handling **session vs user level calculations**  
+- Building **funnel analysis from raw behavioral data**  
+- Designing dashboards focused on **decision-making**  
 
 ---
 
@@ -135,17 +171,17 @@ This ensures clean relationships and scalable analysis.
 <br><br>
 <img width="658" height="375" alt="User Behaviour" src="https://github.com/user-attachments/assets/8b93a9cf-5c14-42be-b62e-5654ad010d5a" />
 
-
 ---
 
 ## 🎯 Why this project matters
 
-This isn’t just a dashboard — it’s a **decision-making tool**.
+This is not just a dashboard — it is a **decision-making tool**.
 
-It highlights:
-- Where revenue is coming from  
-- Where users drop off  
-- What needs optimization  
+It helps identify:
+- 📊 Where revenue is coming from  
+- 📉 Where users drop off  
+- ⚠️ What needs optimization  
+- 🚀 Where business can grow  
 
 ---
 
