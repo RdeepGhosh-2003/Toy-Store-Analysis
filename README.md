@@ -19,6 +19,18 @@ Instead of just showing numbers, the focus is on answering real business questio
 
 ---
 
+## 🚨 Business Problems Solved
+
+- 📉 High traffic but low conversion (473K sessions → 6.8% conversion)
+- 🛒 Significant drop-off in funnel (especially Product → Cart stage)
+- 📢 Unclear performance across marketing channels
+- 📱 Poor mobile conversion compared to desktop
+- 🔁 Low repeat user contribution
+
+👉 This dashboard helps identify and prioritize these issues.
+
+---
+
 ## 📊 Key Business Metrics
 
 | Metric | Value |
@@ -29,6 +41,18 @@ Instead of just showing numbers, the focus is on answering real business questio
 | 🌐 Sessions | 473K |
 | 💳 AOV | $60 |
 | 📈 Conversion Rate | 6.83% |
+
+---
+
+## 💡 Key Insights (Summary)
+
+| Area | Insight |
+|------|--------|
+| Funnel | 64% drop-off at Cart stage |
+| Marketing | Google drives volume, Bing converts better |
+| Users | Repeat users convert ~18% higher |
+| Device | Desktop converts ~3x better than mobile |
+| Products | Some high-margin products underperform |
 
 ---
 
@@ -100,27 +124,25 @@ Mobile users underperform compared to desktop.
 
 This project uses a **Star Schema** for efficient and scalable analysis:
 
-       DateTable
-           │
-           │
-┌───────────▼───────────┐
-│ Orders │
-└───────────┬───────────┘
-│
-┌───────▼────────┐
-│ Order_Items │
-└───────┬────────┘
-│
-┌──────▼──────┐
-│ Products │
-└─────────────┘
+          DateTable
+              │
+              │
+        ┌─────▼─────┐
+        │   Orders  │
+        └─────┬─────┘
+              │
+      ┌───────▼────────┐
+      │  Order_Items   │
+      └───────┬────────┘
+              │
+        ┌─────▼─────┐
+        │  Products │
+        └───────────┘
 
-Other Supporting Tables:
-
-Website_Sessions
-Website_Pageviews
-Order_Item_Refunds
-
+### 📌 Supporting Tables
+- Website Sessions  
+- Website Pageviews  
+- Order Item Refunds  
 
 ### 💡 Key Modeling Decisions
 - Created a dedicated **Date Table** for time intelligence  
@@ -169,7 +191,29 @@ Order_Item_Refunds
 <br><br>
 <img width="660" height="375" alt="Product Performance" src="https://github.com/user-attachments/assets/2fed9435-e662-4fce-ae03-d3a465cfe9ea" />
 <br><br>
-<img width="658" height="375" alt="User Behaviour" src="https://github.com/user-attachments/assets/8b93a9cf-5c14-42be-b62e-5654ad010d5a" />
+<img width="658" height="375" alt="User Behavior" src="https://github.com/user-attachments/assets/8b93a9cf-5c14-42be-b62e-5654ad010d5a" />
+
+---
+
+## 🚀 How to Use
+
+1. Download the `.pbix` file from this repository  
+2. Open in Power BI Desktop  
+3. Use slicers to filter by:
+   - 📅 Date  
+   - 📢 Channel  
+   - 📱 Device  
+4. Navigate across pages using the top menu  
+
+---
+
+## 🔮 Future Improvements
+
+- 📊 Cohort analysis (user retention over time)  
+- 💰 Customer Lifetime Value (CLV)  
+- 📢 Marketing ROI (with ad spend data)  
+- 📱 Mobile UX deep-dive  
+- 🔐 Row-Level Security (RLS)  
 
 ---
 
