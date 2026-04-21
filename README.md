@@ -181,6 +181,12 @@ This project uses a **Star Schema** for efficient and scalable analysis:
 
 ---
 
+## 📥 Download Power BI File
+
+📁 [Download .pbix file](https://drive.google.com/file/d/1DfM27Zgl2j6QeTHX4XJ1Od4G-T4Bawxm/view?usp=sharing)
+
+---
+
 ## 📸 Dashboard preview
 
 <img width="660" height="374" alt="OVERVIEW" src="https://github.com/user-attachments/assets/2a74d6b6-af5c-4997-a7f1-96dbd76c6b5f" />
